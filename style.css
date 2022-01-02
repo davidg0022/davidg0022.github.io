@@ -1,0 +1,372 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: white;
+  font-family: "montserrat";
+  margin: 0;
+}
+canvas {
+  display: block;
+}
+nav div #name:hover {
+  color: gray;
+}
+nav ul li a:hover {
+  color: gray;
+  background: white;
+  padding: 7px 13px;
+  border-radius: 10px;
+}
+
+nav {
+  scroll-snap-align: start;
+  z-index: 9;
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  top: 0px;
+  box-shadow: 0px 0px 10px 8px #888888;
+}
+nav div #name {
+  position: absolute;
+  float: left;
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 0px;
+  left: 100px;
+  font-weight: bold;
+  transition: 0.7s;
+}
+nav ul {
+  list-style: none;
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 19px;
+}
+nav ul li a {
+  position: relative;
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+nav a {
+  transition: 0.4s;
+}
+nav div #pic {
+  z-index: 12;
+  padding: 0;
+  width: 20%;
+  height: 20%;
+  position: absolute;
+}
+nav div #pic img {
+  position: absolute;
+  z-index: 12;
+  top: 1.5vh;
+  left: 3.5vh;
+  height: 50px;
+  transition: ease-in-out 1s;
+}
+nav div #pic img:hover {
+  filter: opacity(0.5) drop-shadow(0 0 0 gray);
+  transform: rotate(+360deg);
+}
+.leftText {
+  z-index: 11;
+  position: absolute;
+  float: left;
+  top: 40vh;
+  margin-left: 9%;
+  font-size: 30px;
+  font-size: 3.5vw;
+}
+.leftTextText p {
+  z-index: 16;
+  font: bold;
+}
+.leftText .name {
+  margin-left: 29%;
+}
+.rightText {
+  z-index: 5;
+  position: absolute;
+  left: 65%;
+  top: 37vh;
+  font-size: 30px;
+  font-size: 3.5vw;
+}
+.rightText .p{
+  margin-left: 10%;
+}
+.rightText .w{
+  margin-left: 3%;
+}
+.burger {
+  float: right;
+  margin: 25px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.burger:hover div {
+  background-color: gray;
+}
+.burger div {
+  transition: 0.7s;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.scroll-btn {
+  display: none;
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  bottom: 20px;
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .scroll-btn {
+    display: block;
+  }
+  nav div #name {
+    font-size: 30px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  .leftText {
+    top: 45vh;
+  }
+  .rightText {
+    top: 42vh;
+  }
+}
+@media (max-width: 780px) {
+  .back .row div {
+    font-size: 55px;
+    font-size: 22px;
+  }
+  .back .row {
+    padding: 0 2px;
+  }
+  .scroll-btn {
+    display: block;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    top: 9.5vh;
+    border-top: 2px solid white;
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background-color: black;
+    transform: translateX(100%);
+    transition: 0.5s ease-in-out;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links li {
+    opacity: 0;
+    margin: 25px;
+  }
+  .leftText {
+    position: absolute;
+    left: 16vw;
+    top: 22vh;
+    font-size: 22px;
+    font-size: 7.2vw;
+  }
+  .leftText p{
+    align-items: center;
+  }
+  .rightText{
+    font-size: 22px;
+    font-size: 7.2vw;
+    left: 20vw;
+    top: 70%;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.webgl {
+  position: relative;
+  display: block;
+}
+
+.back {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 950px;
+  background-color: white(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.back .row {
+  left: -19%;
+  top: -37%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 4px 0;
+  white-space: nowrap;
+  font-size: 60px;
+  transform: rotate(-30deg);
+}
+.back .row div i {
+  color: rgb(155, 154, 154);
+  transition: 1s;
+  user-select: none;
+  cursor: defaut;
+}
+.back .row div i:hover {
+  text-shadow: 1px 1px 1px;
+  opacity: 1;
+  transition: 0s;
+  color: black;
+}
+.back .row div {
+  animation: animate1 80s linear infinite;
+  animation-delay: -80s;
+}
+.back .row div:nth-child(2) {
+  animation: animate2 80s linear infinite;
+  animation-delay: -40s;
+}
+@keyframes animate1 {
+  0% {
+    transform: translateX(100%);
+    z-index: 2;
+  }
+  100% {
+    transform: translateX(-100%);
+    z-index: 2;
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+    z-index: 2;
+  }
+  100% {
+    transform: translateX(-200%);
+    z-index: 1;
+  }
+}
+
+.back .row:nth-child(even) div {
+  animation: animate3 80s linear infinite;
+  animation-delay: -80s;
+}
+.back .row:nth-child(even) div:nth-child(2) {
+  animation: animate4 80s linear infinite;
+  animation-delay: -40s;
+}
+@keyframes animate3 {
+  0% {
+    z-index: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+    z-index: 2;
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+    z-index: 1;
+  }
+  100% {
+    transform: translateX(0);
+    z-index: 2;
+  }
+}
+
+.scroll-btn:before,
+.scroll-btn:after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid black;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-btn::after {
+  top: 30%;
+  animation-delay: 0.3s;
+}
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
