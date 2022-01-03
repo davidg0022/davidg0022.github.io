@@ -149,3 +149,51 @@ const navSlide = () => {
 };
 
 navSlide();
+
+function sleep(ms) {
+  return new Promise(resolve >= setTimeout(resolve, ms));
+}
+
+const name = () => {
+  const Name = document.querySelector(".leftText .name p");
+  const LeftArow = document.querySelector(".leftText .name .A-left");
+  const RightArow = document.querySelector(".leftText .name .A-right");
+  const Projects = document.querySelector(".leftText .name .Project");
+  const Resume = document.querySelector(".leftText .name .Resume");
+  const Body = document.body;
+  var paused = false;
+  Name.addEventListener("click", () => {
+    if (!paused) {
+      Name.style.animation = "TextAnimationP 5s ease-in-out";
+      RightArow.style.animation = "none";
+      RightArow.style.opacity = "0";
+      LeftArow.style.animation = "none";
+      LeftArow.style.opacity = "0";
+      setTimeout(() => {
+        paused = true;
+        Projects.style.display = "block";
+        Resume.style.display = "block";
+        Projects.style.animation = "Project 2s ease-in-out";
+        Resume.style.animation = "Resume 2s ease-in-out";
+      }, 1000);
+    }
+  });
+  Body.addEventListener("click", () => {
+    if (paused) {
+      paused = false;
+      Name.style.animation = "TextAnimationPP 5s ease-in-out";
+      Projects.style.animation = "Project1 2s ease-in-out";
+      Resume.style.animation = "Resume1 2s ease-in-out";
+      setTimeout(() => {
+        Name.style.animation = "TextAnimation 1.5s ease-in-out infinite";
+        LeftArow.style.opacity = "1";
+        RightArow.style.opacity = "1";
+        Projects.style.display = "none";
+        Resume.style.display = "none";
+        LeftArow.style.animation = "RightArrow 5s ease-in-out infinite";
+        RightArow.style.animation = "LeftArrow 5s ease-in-out infinite";
+      }, 2000);
+    }
+  });
+};
+name();

@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  list-style: none;
   text-decoration: none;
 }
 
@@ -85,7 +84,7 @@ nav div #pic img:hover {
   transform: rotate(+360deg);
 }
 .leftText {
-  z-index: 11;
+  z-index: 1;
   position: absolute;
   float: left;
   top: 40vh;
@@ -93,13 +92,184 @@ nav div #pic img:hover {
   font-size: 30px;
   font-size: 3.5vw;
 }
-.leftTextText p {
-  z-index: 16;
-  font: bold;
+.leftText .name{
+  position: relative;
+
 }
-.leftText .name {
-  margin-left: 29%;
+.leftText .name p{
+  z-index: 2;
+  margin: 29%;
+  margin-top: 1%;
+  cursor: pointer;
+  color: black;
+  background:white;
+  border-radius: 10px;
+  animation: TextAnimation 1.5s ease-in-out infinite;
+  transition: 2s;
 }
+.paused{
+  animation-play-state: paused;
+}
+.leftText .A-left{
+  z-index: 1;
+  position: absolute;
+  top: 25%;
+  height: 2vw;
+  opacity: 1;
+  animation: RightArrow 5s ease-in-out infinite;
+}
+.leftText .A-right{
+  z-index: 1;
+  position: absolute;
+  left: 89%;
+  top:25%;
+  height: 1.9vw;
+  animation:  LeftArrow 5s ease-in-out infinite;
+}
+@keyframes RightArrow{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+    transform: translateX(+6.5vh);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes LeftArrow{
+    0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+    transform: translateX(-6.5vh);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes TextAnimation{
+  0%{
+    transition: 2s;
+    background-color: black;
+    color: white;
+    transform: rotate(-2deg);
+  }
+  50%{
+    background-color: black;
+    color: white;
+    transform:rotate(+2deg);
+  }
+  100%{
+    background-color: black;
+    color: white;
+    transform:rotate(-2deg);
+  }
+}
+@keyframes TextAnimationP{
+  0%{
+    background-color: black;
+    color: white;
+  }
+  50%{
+    background-color: white;
+    color: black;
+  }
+}
+@keyframes TextAnimationPP{
+  0%{
+    background-color: white;
+    color: black;
+  }
+  50%{
+    background-color: black;
+    color: white;
+  }
+}
+.leftText .name .Project{
+  border-radius: 4px;
+  display: none;
+  color: white;
+  background: black;
+  padding: 3px;
+  z-index: 1;
+  font-size: 1.2vw;
+  left: -6.5vw;
+  float: left;
+  position: absolute;
+  top: 20%;
+  animation: none;
+  animation: Project 2s ease-in-out;
+}
+.leftText .name .Project a{
+  color: white;
+}
+.leftText .name .Resume{
+  text-decoration: none;
+  border-radius: 4px;
+  display: none;
+  padding: 3px;
+  color: white;
+  background: black;
+  z-index: 1;
+  top: 20%;
+  left: +12vw;
+  font-size: 1.2vw;
+  position: absolute;
+  animation: Resume 2s ease-in-out;
+}
+.leftText .name .Resume a{
+  color: white;
+}
+.leftText .name .Project:hover{
+  color: gray;
+}
+.leftText .name .Resume:hover{
+  color: gray;
+}
+
+@keyframes Resume{
+  0%{
+    opacity: 0;
+    transform: translateX(-7vw);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(+0px);
+  }
+}
+@keyframes Resume1{
+  100%{
+    opacity: 0;
+    transform: translateX(-7vw);
+  }
+}
+@keyframes Project{
+  0%{
+    opacity: 0;
+    transform: translateX(+7vw);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(+0px);
+  }
+}
+@keyframes Project1{
+  100%{
+    opacity: 0;
+    transform: translateX(+7vw);
+  }
+}
+
 .rightText {
   z-index: 5;
   position: absolute;
@@ -145,7 +315,7 @@ nav div #pic img:hover {
   cursor: pointer;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1350px) {
   .scroll-btn {
     display: block;
   }
@@ -153,7 +323,7 @@ nav div #pic img:hover {
     font-size: 30px;
   }
   nav ul li a {
-    font-size: 15px;
+    font-size: 13px;
   }
   .leftText {
     top: 45vh;
@@ -207,12 +377,24 @@ nav div #pic img:hover {
   .leftText p{
     align-items: center;
   }
+  .leftText .name .Project{
+    left:-16.9vw;
+    font-size: 3.2vw;
+  }
+  .leftText .name .Resume{
+    left: +23vw;
+    font-size: 3.2vw;
+  }
+  .leftText .name img{
+    height: 5vw;
+  }
   .rightText{
     font-size: 22px;
     font-size: 7.2vw;
     left: 20vw;
     top: 70%;
   }
+
 }
 
 @keyframes navLinkFade {
