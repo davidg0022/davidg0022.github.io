@@ -228,12 +228,18 @@ nav div #pic img:hover {
   animation: Resume 2s ease-in-out;
 }
 .leftText .name .Resume a{
+  transition: 1s;
+}
+.leftText .name .Project a{
+  transition: 1s;
+}
+.leftText .name .Resume a{
   color: white;
 }
-.leftText .name .Project:hover{
+.leftText .name .Project:hover a{
   color: gray;
 }
-.leftText .name .Resume:hover{
+.leftText .name .Resume:hover a{
   color: gray;
 }
 
