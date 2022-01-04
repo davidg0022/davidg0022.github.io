@@ -20,7 +20,7 @@ nav ul li a:hover {
   color: gray;
   background: white;
   padding: 7px 13px;
-  border-radius: 10px;
+  border-radius: 0.7vh;
 }
 
 nav {
@@ -29,7 +29,7 @@ nav {
   position: fixed;
   background-color: black;
   width: 100%;
-  height: 80px;
+  height: 9vh;
   top: 0px;
   box-shadow: 0px 0px 10px 8px #888888;
 }
@@ -37,10 +37,10 @@ nav div #name {
   position: absolute;
   float: left;
   color: white;
-  font-size: 35px;
-  line-height: 80px;
+  font-size: 4vh;
+  line-height: 7.8vh;
   padding: 0 0px;
-  left: 100px;
+  left: 5vw;
   font-weight: bold;
   transition: 0.7s;
 }
@@ -51,13 +51,13 @@ nav ul {
 }
 nav ul li {
   display: inline-block;
-  line-height: 80px;
-  margin: 0 19px;
+  line-height: 7.9vh;
+  margin: 0 2vw;
 }
 nav ul li a {
   position: relative;
   color: white;
-  font-size: 17px;
+  font-size: 1.9vh;
   text-transform: uppercase;
   transition: 0.3s;
 }
@@ -76,7 +76,7 @@ nav div #pic img {
   z-index: 12;
   top: 1.5vh;
   left: 3.5vh;
-  height: 50px;
+  height: 5vh;
   transition: ease-in-out 1s;
 }
 nav div #pic img:hover {
@@ -92,25 +92,24 @@ nav div #pic img:hover {
   font-size: 30px;
   font-size: 3.5vw;
 }
-.leftText .name{
+.leftText .name {
   position: relative;
-
 }
-.leftText .name p{
+.leftText .name p {
   z-index: 2;
   margin: 29%;
   margin-top: 1%;
   cursor: pointer;
   color: black;
-  background:white;
-  border-radius: 10px;
+  background: white;
+  border-radius: 1vh;
   animation: TextAnimation 1.5s ease-in-out infinite;
   transition: 2s;
 }
-.paused{
+.paused {
   animation-play-state: paused;
 }
-.leftText .A-left{
+.leftText .A-left {
   z-index: 1;
   position: absolute;
   top: 25%;
@@ -118,85 +117,85 @@ nav div #pic img:hover {
   opacity: 1;
   animation: RightArrow 5s ease-in-out infinite;
 }
-.leftText .A-right{
+.leftText .A-right {
   z-index: 1;
   position: absolute;
   left: 89%;
-  top:25%;
+  top: 25%;
   height: 1.9vw;
-  animation:  LeftArrow 5s ease-in-out infinite;
+  animation: LeftArrow 5s ease-in-out infinite;
 }
-@keyframes RightArrow{
-  0%{
+@keyframes RightArrow {
+  0% {
     opacity: 0;
   }
-  25%{
+  25% {
     opacity: 1;
   }
-  50%{
+  50% {
     opacity: 0;
     transform: translateX(+6.5vh);
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
-@keyframes LeftArrow{
-    0%{
+@keyframes LeftArrow {
+  0% {
     opacity: 0;
   }
-  25%{
+  25% {
     opacity: 1;
   }
-  50%{
+  50% {
     opacity: 0;
     transform: translateX(-6.5vh);
   }
-  100%{
+  100% {
     opacity: 0;
   }
 }
 
-@keyframes TextAnimation{
-  0%{
+@keyframes TextAnimation {
+  0% {
     transition: 2s;
     background-color: black;
     color: white;
     transform: rotate(-2deg);
   }
-  50%{
+  50% {
     background-color: black;
     color: white;
-    transform:rotate(+2deg);
+    transform: rotate(+2deg);
   }
-  100%{
+  100% {
     background-color: black;
     color: white;
-    transform:rotate(-2deg);
+    transform: rotate(-2deg);
   }
 }
-@keyframes TextAnimationP{
-  0%{
+@keyframes TextAnimationP {
+  0% {
     background-color: black;
     color: white;
   }
-  50%{
+  50% {
     background-color: white;
     color: black;
   }
 }
-@keyframes TextAnimationPP{
-  0%{
+@keyframes TextAnimationPP {
+  0% {
     background-color: white;
     color: black;
   }
-  50%{
+  50% {
     background-color: black;
     color: white;
   }
 }
-.leftText .name .Project{
-  border-radius: 4px;
+.leftText .name .Project {
+  border-radius: 0.5vh;
   display: none;
   color: white;
   background: black;
@@ -210,12 +209,12 @@ nav div #pic img:hover {
   animation: none;
   animation: Project 2s ease-in-out;
 }
-.leftText .name .Project a{
+.leftText .name .Project a {
   color: white;
 }
-.leftText .name .Resume{
+.leftText .name .Resume {
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 0.5vh;
   display: none;
   padding: 3px;
   color: white;
@@ -227,50 +226,50 @@ nav div #pic img:hover {
   position: absolute;
   animation: Resume 2s ease-in-out;
 }
-.leftText .name .Resume a{
+.leftText .name .Resume a {
   transition: 1s;
 }
-.leftText .name .Project a{
+.leftText .name .Project a {
   transition: 1s;
 }
-.leftText .name .Resume a{
+.leftText .name .Resume a {
   color: white;
 }
-.leftText .name .Project:hover a{
+.leftText .name .Project:hover a {
   color: gray;
 }
-.leftText .name .Resume:hover a{
+.leftText .name .Resume:hover a {
   color: gray;
 }
 
-@keyframes Resume{
-  0%{
+@keyframes Resume {
+  0% {
     opacity: 0;
     transform: translateX(-7vw);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(+0px);
   }
 }
-@keyframes Resume1{
-  100%{
+@keyframes Resume1 {
+  100% {
     opacity: 0;
     transform: translateX(-7vw);
   }
 }
-@keyframes Project{
-  0%{
+@keyframes Project {
+  0% {
     opacity: 0;
     transform: translateX(+7vw);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateX(+0px);
   }
 }
-@keyframes Project1{
-  100%{
+@keyframes Project1 {
+  100% {
     opacity: 0;
     transform: translateX(+7vw);
   }
@@ -284,16 +283,16 @@ nav div #pic img:hover {
   font-size: 30px;
   font-size: 3.5vw;
 }
-.rightText .p{
+.rightText .p {
   margin-left: 10%;
 }
-.rightText .w{
+.rightText .w {
   margin-left: 3%;
 }
 .burger {
   float: right;
-  margin: 25px;
-  margin-right: 40px;
+  margin: 2.5vh;
+  margin-right: 4vh;
   cursor: pointer;
   display: none;
 }
@@ -321,7 +320,7 @@ nav div #pic img:hover {
   cursor: pointer;
 }
 
-@media (max-width: 1350px) {
+/* @media (max-width: 1350px) {
   .scroll-btn {
     display: block;
   }
@@ -330,6 +329,7 @@ nav div #pic img:hover {
   }
   nav ul li a {
     font-size: 13px;
+    padding: 0px;
   }
   .leftText {
     top: 45vh;
@@ -337,11 +337,15 @@ nav div #pic img:hover {
   .rightText {
     top: 42vh;
   }
-}
-@media (max-width: 780px) {
+} */
+@media (max-width: 952px) {
   .back .row div {
     font-size: 55px;
     font-size: 22px;
+  }
+  nav div #name {
+    margin-left: 25vw;
+    font-size: 8vw;
   }
   .back .row {
     padding: 0 2px;
@@ -355,23 +359,29 @@ nav div #pic img:hover {
   .nav-links {
     position: absolute;
     top: 9.5vh;
-    border-top: 2px solid white;
-    height: 92vh;
+    z-index: 1;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 4vh;
+    overflow: hidden;
     background-color: black;
     transform: translateX(100%);
     transition: 0.5s ease-in-out;
+  }
+  nav ul li a {
+    font-size: 2vh;
+    padding: 20vh;
   }
   .burger {
     display: block;
   }
   .nav-links li {
     opacity: 0;
-    margin: 25px;
+
+    margin: 3vh;
   }
   .leftText {
     position: absolute;
@@ -380,27 +390,26 @@ nav div #pic img:hover {
     font-size: 22px;
     font-size: 7.2vw;
   }
-  .leftText p{
+  .leftText p {
     align-items: center;
   }
-  .leftText .name .Project{
-    left:-16.9vw;
+  .leftText .name .Project {
+    left: -16.9vw;
     font-size: 3.2vw;
   }
-  .leftText .name .Resume{
+  .leftText .name .Resume {
     left: +23vw;
     font-size: 3.2vw;
   }
-  .leftText .name img{
+  .leftText .name img {
     height: 5vw;
   }
-  .rightText{
+  .rightText {
     font-size: 22px;
     font-size: 7.2vw;
     left: 20vw;
     top: 70%;
   }
-
 }
 
 @keyframes navLinkFade {
@@ -436,7 +445,7 @@ nav div #pic img:hover {
 .back {
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 950px;
+  margin-top: 100vh;
   background-color: white(0, 0, 0);
   width: 100%;
   height: 100%;

@@ -77,7 +77,7 @@ scene.background = new THREE.Color(0xffffff);
 function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
-  if (window.innerWidth <= 952 && !small) {
+  if (window.innerWidth <= 1024 && !small) {
     small = true;
     camera.position.set(0, 2, 20);
   } else if (window.innerWidth > 1050 && small) {
@@ -147,8 +147,9 @@ const navSlide = () => {
     }
   });
 };
-
 navSlide();
+
+
 
 function sleep(ms) {
   return new Promise(resolve >= setTimeout(resolve, ms));
