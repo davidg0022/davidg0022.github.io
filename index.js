@@ -151,9 +151,14 @@ navSlide();
 
 
 
-function sleep(ms) {
-  return new Promise(resolve >= setTimeout(resolve, ms));
+const Swipe = () => {
+  const Icon = document.querySelector(".swipe img");
+  controls.addEventListener("change", () => {
+    Icon.style.animation = "none";
+  })
 }
+Swipe();
+
 
 const name = () => {
   const Name = document.querySelector(".leftText .name p");
