@@ -363,50 +363,6 @@ nav div #pic img:hover {
     opacity: 0;
   }
 }
-@media (max-width: 1052px) {
-  .swipe img {
-    height: 8vh;
-    width: 8vh;
-    left: 39vw;
-  }
-  nav div #name {
-    margin-left: 6vh;
-  }
-  .scroll-btn {
-    display: block;
-  }
-  .leftText {
-    position: absolute;
-    left: 16vw;
-    top: 22vh;
-    font-size: 22px;
-    font-size: 7.2vw;
-  }
-  .leftText p {
-    align-items: center;
-  }
-  .leftText .name .Project {
-    left: -16.9vw;
-    font-size: 3.2vw;
-  }
-  .leftText .name .Resume {
-    left: +23vw;
-    font-size: 3.2vw;
-  }
-  .leftText .name img {
-    height: 5vw;
-  }
-  .rightText {
-    font-size: 22px;
-    font-size: 7.2vw;
-    left: 20vw;
-    top: 70%;
-  }
-  nav ul li a {
-    font-size: 1.3vh;
-  }
-}
-
 @media (max-width: 952px) {
   nav div #name {
     margin-left: 25vw;
@@ -495,6 +451,7 @@ nav div #pic img:hover {
   transition: 1s;
   user-select: none;
   cursor: defaut;
+  font-size: 44px;
 }
 .back .row div i:hover {
   text-shadow: 1px 1px 1px;
@@ -595,31 +552,146 @@ nav div #pic img:hover {
 }
 .Section2 {
   position: absolute;
+  margin: 0;
+  padding: 0;
   top: 100vh;
 }
-.Section2 img{
-  height: 100vh;
-  width: 100vw;
+.Section2 img {
+  position: absolute;
+  z-index: 3;
+  border-radius: 1vw;
+  width: 25vw;
+  top: 8vh;
+  left: 5vw;
 }
-.gr{
+.Section2 .slider-frame {
+  overflow: hidden;
+  height: 85vh;
+  width: 40vw;
+  top: 8vh;
+  left: 5vw;
+}
+
+@-webkit-keyframes slide_animation{
+  0%{left: 0px;}
+  5%{left: 0px;}
+  10%{left: 80vw;}
+  15%{left: 80vw;}
+  20%{left: 160vw;}
+  25%{left: 160vw;}
+  30%{left: 240vw;}
+  35%{left: 240vw;}
+  40%{left: 320vw;}
+  45%{left: 320vw;}
+  50%{left: 320vw;}
+  55%{left: 240vw;}
+  60%{left: 240vw;}
+  65%{left: 240vw;}
+  70%{left: 160vw;}
+  75%{left: 160vw;}
+  80%{left: 160vw;}
+  85%{left: 80vw;}
+  90%{left: 80vw;}
+  92%{left: 80vw;}
+  95%{left: 0px;}
+  100%{left: 0px;}
+}
+
+
+.Section2 .slider-frame .slide-images{
+  width: 400vw;
+  height: 800px;
+  margin:  0 0 0 -320vw;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 120s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction:alternate;
+  -webkit-animation-play-state: running;
+}
+
+.img-container{
+  height: 800px;
+  width: 80vw;
+  position: relative;
+  float: left;
+}
+
+.Section2 .right {
+  z-index: 3;
+  box-shadow: 0px 0px 1vh 0.2vh black;
+  top: 15vh;
+  left: 20vw;
+  color: white;
+  position: absolute;
+  z-index: 4;
+  width: 25vw;
+  background-color: rgb(47, 47, 47, 1);
+  border-radius: 0.7vw;
+}
+.Section2 h1 {
+  margin: 1vw;
+}
+.Section2 p {
+  font-size: 1vw;
+  z-index: 4;
+  margin: 1vw;
+}
+
+.Section2 p a:hover {
+  color: #888888;
+}
+.Section2 h1{
+  font-size: 1.5vw;
+}
+
+.Section2 p a {
+  color: white;
+  text-decoration: underline;
+  transition: 1s;
+}
+.Section2 .nick {
+  font-size: 0.85vw;
+}
+
+.Section2 .right1 {
+  top: 35vh;
+  left: 60vw;
+  color: black;
+  position: absolute;
+  z-index: 4;
+  width: 21vw;
+  background-color: rgb(47, 47, 47, 0.5);
+  box-shadow: 0px 0px 1vh 0.2vh black;
+  border-radius: 0.7vw;
+}
+.Section2 .grad{
+  z-index: 4;
+  position: absolute;
+  height: 100vh;
+  width: 5vw;
+  left: 35vw;
+  background-image: linear-gradient(to left, white,transparent);
+}
+.gr {
   pointer-events: none;
-  z-index: 2;
+  z-index: 6;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 25vh;
   top: 200vh;
-  background-image: linear-gradient(rgb(158, 158, 158) 1%,transparent);
+  background-image: linear-gradient(rgb(199, 199, 199) 1%, transparent);
 }
-.gr1{
+.gr1 {
   pointer-events: none;
-  z-index: 2;
+  z-index: 6;
   position: absolute;
   width: 100vw;
-  height: 100vh;
-  top: 100vh;
-  background-image: linear-gradient(transparent,rgb(158, 158, 158) 99%);
+  height: 25vh;
+  top: 175vh;
+  background-image: linear-gradient(transparent, rgb(199, 199, 199) 99%);
 }
-.contact{
+.contact {
   z-index: 2;
   box-shadow: 0px 0px 1vh 0.8vh #888888;
   position: absolute;
@@ -627,4 +699,116 @@ nav div #pic img:hover {
   height: 50vh;
   width: 100vw;
   background: black;
+}
+
+#aboutL {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 92vh;
+}
+@media (max-width: 1052px) {
+  .swipe img {
+    height: 8vh;
+    width: 8vh;
+    left: 39vw;
+  }
+  nav div #name {
+    margin-left: 6vh;
+  }
+  .scroll-btn {
+    display: block;
+  }
+  .leftText {
+    position: absolute;
+    left: 16vw;
+    top: 22vh;
+    font-size: 22px;
+    font-size: 7.2vw;
+  }
+  .leftText p {
+    align-items: center;
+  }
+  .leftText .name .Project {
+    left: -16.9vw;
+    font-size: 3.2vw;
+  }
+  .leftText .name .Resume {
+    left: +23vw;
+    font-size: 3.2vw;
+  }
+  .leftText .name img {
+    height: 5vw;
+  }
+  .rightText {
+    font-size: 22px;
+    font-size: 7.2vw;
+    left: 20vw;
+    top: 70%;
+  }
+  nav ul li a {
+    font-size: 1.3vh;
+  }
+  .Section2 img{
+    top: 5vh;
+    width: 40vw;
+  }
+  .Section2 .right{
+    top: 10vh;
+    width: 50vw;
+    left: 30vw;
+  }
+  .Section2 p{
+    font-size: 2.3vw;
+  }
+  .Section2 .nick{
+    font-size: 1.8vw;
+  }
+  .Section2 h1{
+    font-size: 3vw;
+  }
+  .Section2 .slider-frame{
+    width: 60vw;
+  }
+  .Section2 .grad{
+    left: 55.2vw;
+  }
+  .Section2 .right1{
+    z-index: 7;
+    width: 40vw;
+    top: 55vh;
+    left: 10vw;
+  }
+}
+@media (max-width:952px){
+  .Section2 img{
+    top: 5vw;
+    width: 45vw;
+  }
+  .Section2 .grad{
+    left: 55.2vw;
+  }
+  .Section2 .right{
+    top: 10vh;
+    left: 31vw;
+    width: 65vw;
+  }
+  .Section2 h1{
+    margin-top: 1vh;
+    margin-left: 1.5vh;
+    font-size: 2vh;
+  }
+  .Section2 p{
+    font-size: 1.6vh;
+    margin: 1.5vh;
+  }
+  .Section2 .nick{
+    font-size:1.5vh;
+  }
+  .Section2 .right1{
+    width: 35vh;
+    top: 57vh;
+    left: 4vh;
+    z-index: 7;
+  }
 }

@@ -60,6 +60,7 @@ controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
 controls.enableDamping = true;
 controls.enablePan = false;
+
 var small = false;
 window.addEventListener("resize", resize);
 function resize() {
@@ -100,7 +101,7 @@ $(document).ready(function () {
 
       $("html, body").animate(
         {
-          scrollTop: $(hash).offset().top,
+          scrollTop: $(hash).offset().top -10,
         },
         800,
         function () {
