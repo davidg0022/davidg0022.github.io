@@ -170,7 +170,7 @@ const name = () => {
   const Body = document.body;
   var paused = false;
   Name.addEventListener("click", () => {
-    if (!paused) {
+    if (!paused) { 
       Name.style.animation = "TextAnimationP 5s ease-in-out";
       RightArow.style.animation = "none";
       RightArow.style.opacity = "0";
@@ -187,11 +187,11 @@ const name = () => {
   });
   Body.addEventListener("click", () => {
     if (paused) {
-      paused = false;
       Name.style.animation = "TextAnimationPP 5s ease-in-out";
       Projects.style.animation = "Project1 2s ease-in-out";
       Resume.style.animation = "Resume1 2s ease-in-out";
       setTimeout(() => {
+        paused = false;
         Name.style.animation = "TextAnimation 1.5s ease-in-out infinite";
         LeftArow.style.opacity = "1";
         RightArow.style.opacity = "1";
