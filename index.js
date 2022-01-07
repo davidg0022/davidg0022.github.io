@@ -125,10 +125,13 @@ function Load() {
       Nav.style.top = "0vh";
       Left.style.top = "22vh";
       Left.style.opacity = "1";
-      Right.style.top = "70%";
+      Right.style.top = "65%";
       Right.style.opacity = "1";
       Scroll.style.opacity = "1";
-      Scroll.style.top = "90vh";
+      if (innerWidth < 900)
+        Scroll.style.top = "85vh"
+      else
+        Scroll.style.top = "92vh";
       console.log(Left);
     }, 500);
   }
