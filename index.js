@@ -99,6 +99,7 @@ function animate() {
     Loaded = true;
     Body.style.overflow = "visible";
   } else if (small && camera.position.z >= 20) {
+    controls.enableRotate = true;
     Loaded = true;
     Body.style.overflow = "visible";
   }
