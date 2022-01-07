@@ -128,7 +128,7 @@ function Load() {
       Right.style.top = "70%";
       Right.style.opacity = "1";
       Scroll.style.opacity = "1";
-      Scroll.style.top = "92vh";
+      Scroll.style.top = "90vh";
       console.log(Left);
     }, 500);
   }
