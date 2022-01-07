@@ -6,6 +6,7 @@
 }
 
 body {
+  overflow:hidden;
   background: white;
   font-family: "montserrat";
   margin: 0;
@@ -30,8 +31,9 @@ nav {
   background-color: black;
   width: 100%;
   height: 9vh;
-  top: 0px;
+  top: -9vh;
   box-shadow: 0px 0px 1vh 0.8vh #888888;
+  transition: ease-in-out 1s;
 }
 nav div #name {
   position: absolute;
@@ -91,6 +93,9 @@ nav div #pic img:hover {
   margin-left: 9%;
   font-size: 30px;
   font-size: 3.5vw;
+  left: -20vw;
+  opacity: 0;
+  transition: ease-out 1.5s;
 }
 .leftText .name {
   position: relative;
@@ -276,12 +281,16 @@ nav div #pic img:hover {
 }
 
 .rightText {
+  white-space: nowrap;
   z-index: 5;
+  height: 5vh;
   position: absolute;
-  left: 65%;
+  left: 95%;
   top: 37vh;
   font-size: 30px;
   font-size: 3.5vw;
+  transition: ease-out 1.5s;
+  opacity: 0;
 }
 .rightText .p {
   margin-left: 10%;
@@ -308,71 +317,53 @@ nav div #pic img:hover {
 }
 
 .scroll-btn {
+  opacity: 0;
   display: none;
   position: absolute;
   z-index: 7;
-  left: 50%;
+  left: 48vw;
+  top:110vh;
   bottom: 20px;
   height: 50px;
   width: 30px;
   border: 2px solid black;
   border-radius: 50px;
   cursor: pointer;
+  transition:ease 2s;
 }
 .back .row {
-  left: -19%;
   top: -37%;
+  left: -15%;
   position: relative;
   width: 100%;
   display: flex;
   white-space: nowrap;
-  font-size: 7.5vw;
   transform: rotate(-30deg);
-  margin: 0;
+  margin: 0.3vh;
 }
-.swipe {
-  z-index: 1;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  pointer-events: none;
-}
-
-.swipe img {
-  height: 8vw;
-  width: 8vw;
-  top: 45%;
-  position: absolute;
-  display: flex;
-  left: 45%;
-  transform: rotate(-25deg);
-  justify-content: center;
-  animation: Swipe 6s ease-in-out infinite;
-  opacity: 0;
+.back .row div i {
+  color: rgb(155, 154, 154);
+  transition: 1s;
+  user-select: none;
+  cursor: defaut;
+  font-size: 2.8vw;
+  margin: 0.5vw;
 }
 
-@keyframes Swipe {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-    transform: translateX(+50%) rotate(+25deg);
-  }
-  40% {
-    opacity: 0;
-  }
-}
 @media (max-width: 952px) {
   nav div #name {
     margin-left: 25vw;
     font-size: 8vw;
   }
-  .back .row {
-    font-size: 0.1vh;
-    margin: 0.2vh;
+  .back .row div i{
+    margin: 1vh;
+    font-size: 3.8vh;
   }
-
+  .back .row{
+    left: +5%;
+    padding: 0;
+    margin: 0;
+  }
   body {
     overflow-x: hidden;
   }
@@ -446,13 +437,7 @@ nav div #pic img:hover {
   overflow: hidden;
 }
 
-.back .row div i {
-  color: rgb(155, 154, 154);
-  transition: 1s;
-  user-select: none;
-  cursor: defaut;
-  font-size: 44px;
-}
+
 .back .row div i:hover {
   text-shadow: 1px 1px 1px;
   opacity: 1;
@@ -464,10 +449,7 @@ nav div #pic img:hover {
   animation: animate1 80s linear infinite;
   animation-delay: -80s;
 }
-.back .row{
-  font-size: 5vh;
-  margin: 0.1vh;
-}
+
 .back .row div:nth-child(2) {
   animation: animate2 80s linear infinite;
   animation-delay: -40s;
@@ -475,21 +457,21 @@ nav div #pic img:hover {
 @keyframes animate1 {
   0% {
     transform: translateX(100%);
-    /* z-index: 2; */
+    z-index: 2;
   }
   100% {
     transform: translateX(-100%);
-    /* z-index: 2; */
+    z-index: 2;
   }
 }
 @keyframes animate2 {
   0% {
     transform: translateX(0%);
-    /* z-index: 2; */
+    z-index: 2;
   }
   100% {
     transform: translateX(-200%);
-    /* z-index: 1; */
+    z-index: 1;
   }
 }
 
@@ -503,22 +485,22 @@ nav div #pic img:hover {
 }
 @keyframes animate3 {
   0% {
-    /* z-index: 1; */
+    z-index: 1;
     transform: translateX(-100%);
   }
   100% {
     transform: translateX(100%);
-    /* z-index: 2; */
+    z-index: 2;
   }
 }
 @keyframes animate4 {
   0% {
     transform: translateX(-200%);
-    /* z-index: 1; */
+    z-index: 1;
   }
   100% {
     transform: translateX(0);
-    /* z-index: 2; */
+    z-index: 2;
   }
 }
 
@@ -585,6 +567,8 @@ nav div #pic img:hover {
   position: absolute;
 }
 .slider-frame1 img {
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(95, 95, 95) );
+  filter: drop-shadow(5px 5px 5px rgb(100, 100, 100));
   overflow: hidden;
   position: absolute;
   width: 20vw;
@@ -814,16 +798,7 @@ nav div #pic img:hover {
   width: 100vw;
   height: 25vh;
   top: 200vh;
-  background-image: linear-gradient(rgb(199, 199, 199) 1%, transparent);
-}
-.gr1 {
-  pointer-events: none;
-  z-index: 6;
-  position: absolute;
-  width: 100vw;
-  height: 25vh;
-  top: 175vh;
-  background-image: linear-gradient(transparent, rgb(199, 199, 199) 99%);
+  background-image: linear-gradient(white 1%, transparent);
 }
 .contact {
   z-index: 2;
@@ -842,15 +817,14 @@ nav div #pic img:hover {
   top: 92vh;
 }
 @media (max-width: 1052px) {
-  .swipe img {
-    height: 8vh;
-    width: 8vh;
-    left: 39vw;
+  .back .row div i{
+    font-size: 3.7vh;
   }
   nav div #name {
     margin-left: 6vh;
   }
   .scroll-btn {
+    top: 150vh;
     display: block;
   }
   .leftText {
