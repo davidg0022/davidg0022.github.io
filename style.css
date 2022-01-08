@@ -6,7 +6,9 @@
 }
 
 body {
-  overflow:hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   background: white;
   font-family: "montserrat";
   margin: 0;
@@ -32,7 +34,7 @@ nav {
   width: 100%;
   height: 9vh;
   top: -10vh;
-  box-shadow: 0px 0px 1vh 0.8vh #888888;
+  box-shadow: 0 5px 4vw 0 rgba(0, 0, 0, 0.8);
   transition: ease-out 1s;
 }
 nav div #name {
@@ -322,14 +324,14 @@ nav div #pic img:hover {
   position: absolute;
   z-index: 7;
   left: 48vw;
-  top:110vh;
+  top: 110vh;
   bottom: 20px;
   height: 50px;
   width: 30px;
   border: 2px solid black;
   border-radius: 50px;
   cursor: pointer;
-  transition:ease 2s;
+  transition: ease 2s;
 }
 .back .row {
   top: -37%;
@@ -355,11 +357,11 @@ nav div #pic img:hover {
     margin-left: 25vw;
     font-size: 8vw;
   }
-  .back .row div i{
+  .back .row div i {
     margin: 1vh;
     font-size: 3.8vh;
   }
-  .back .row{
+  .back .row {
     left: +5%;
     padding: 0;
     margin: 0;
@@ -436,7 +438,6 @@ nav div #pic img:hover {
   flex-direction: column;
   overflow: hidden;
 }
-
 
 .back .row div i:hover {
   text-shadow: 1px 1px 1px;
@@ -567,7 +568,7 @@ nav div #pic img:hover {
   position: absolute;
 }
 .slider-frame1 img {
-  -webkit-filter: drop-shadow(5px 5px 5px rgb(95, 95, 95) );
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(95, 95, 95));
   filter: drop-shadow(5px 5px 5px rgb(100, 100, 100));
   overflow: hidden;
   position: absolute;
@@ -801,13 +802,13 @@ nav div #pic img:hover {
   background-image: linear-gradient(white 1%, transparent);
 }
 .contact {
-  z-index: 2;
-  box-shadow: 0px 0px 1vh 0.8vh #888888;
+  z-index: 117;
   position: absolute;
   top: 300vh;
   height: 50vh;
   width: 100vw;
   background: black;
+  box-shadow: 15px 15px 4vw 15px rgba(0, 0, 0, 0.8);
 }
 
 #aboutL {
@@ -816,8 +817,138 @@ nav div #pic img:hover {
   padding: 0;
   top: 92vh;
 }
+
+.projects {
+  position: absolute;
+  top: 15vh;
+  width: 100%;
+  height: 75vh;
+  z-index: 8;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: black;
+  box-shadow: 0 15px 4vw 0 rgb(0, 0, 0, 0.8);
+}
+
+.swiper-slide {
+  top: 18vh;
+  background-position: center;
+  background-size: cover;
+  max-width: 25vw;
+  min-height: 35vh;
+  background-color: gray;
+  overflow: hidden;
+  margin: 0 20px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent 70%, white);
+}
+.swiper-container {
+  width: 100vw;
+}
+.swiper-slide img {
+  width: 0vw;
+  display: block;
+}
+.swiper-slide .card {
+  font-size: 1vw;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 3.5vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  text-align: center;
+  overflow: hidden;
+  background-color: gray;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+.projects .card .layer {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(white, gray);
+  z-index: 1;
+  transition: 0.5s;
+}
+.card:hover .layer {
+  top: 0;
+}
+.projects .card .content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 90%;
+}
+.projects .card #first {
+  font-weight: bold;
+  margin-top: 15%;
+}
+.projects .title {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.projects h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 4vw;
+  position: absolute;
+  color: gray;
+  background: linear-gradient(to right, gray 50%, white 50%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-out;
+}
+.projects p {
+  padding-top: 1.5vw;
+}
+.projects:hover h3 {
+  background-position: -100%;
+}
+.projects .link {
+  text-decoration: underline;
+  padding-top: 2.3vh;
+  transition: 0.5s;
+}
+.projects .link a {
+  color: black;
+}
+.projects .link:hover {
+  font-size: 1.2vw;
+}
+a[target="_blank"]::after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0 3px 0 5px;
+}
 @media (max-width: 1052px) {
-  .back .row div i{
+  .projects .title h3 {
+    top: 2vh;
+    font-size: 4vh;
+  }
+  .projects .link {
+    padding-top: 1vh;
+    font-size: 2vw;
+  }
+  .projects h2 {
+    font-size: 3vw;
+  }
+  .projects p {
+    font-size: 2vw;
+  }
+  .swiper-slide {
+    top: 12vh;
+    max-width: 27vw;
+  }
+  .back .row div i {
     font-size: 3.7vh;
   }
   nav div #name {
@@ -897,6 +1028,27 @@ nav div #pic img:hover {
   }
 }
 @media (max-width: 952px) {
+  nav ,.Section2 .right ,.Section2 .right1 ,.projects{
+     box-shadow: 0 5px 4vw 0 rgb(0, 0, 0, 0.8);
+  }
+  .projects .title h3 {
+    top: 2vh;
+    font-size: 4vh;
+  }
+  .projects .link {
+    padding-top: 1.5vh;
+    font-size: 1.5vh;
+  }
+  .projects h2 {
+    font-size: 2.5vh;
+  }
+  .projects p {
+    font-size: 1.5vh;
+  }
+  .swiper-slide {
+    top: 12vh;
+    max-width: 45vw;
+  }
   .Section2 img {
     border-radius: 1vh;
     top: 5vw;

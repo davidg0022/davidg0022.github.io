@@ -240,3 +240,6 @@ const name = () => {
   });
 };
 name();
+
+const left = document.querySelector(".swiper-3d .swiper-slide-shadow-left");
+left.style.background = "none";

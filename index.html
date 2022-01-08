@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
     <link rel="icon" href="logo.png" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,11 +24,12 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <canvas class="webgl" id="1"></canvas>
     <script type="module" src="index.js"></script>
-
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <nav>
       <div class="logo">
         <a href="#1" id="pic"><img src="logo.png" alt="" /></a>
@@ -45,6 +50,75 @@
       </div>
     </nav>
     <section class="back" id="3">
+      <div class="projects">
+        <div class="title">
+          <h3>Projects</h3>
+        </div>
+    <div class="swiper-container">
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="layer"></div>
+            <div class="content" id = "first">
+              <p>I haven't contributed to any large projects yet but I wrote some interesting public articles about algorithms and data structures.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="layer"></div>
+            <div class="content">
+              <h2>Numeric Base Search</h2>
+              <p>"Numeric Base Search",as I call it, is an algorithm based on number bases that can be used to find an element in a sorted array.
+              </p>
+              <p>The intuition behind this algorighm is totaly different than tha clasic Binary Search algorighm but has a similar logarithmic time complexity.</p>
+              <div class="link">                       <a href="https://www.geeksforgeeks.org/n-base-modified-binary-search-algorithm/" target="_blank">Read More</a></div>
+  
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="layer"></div>
+            <div class="content">
+              <h2>C++ Big Int Library</h2>
+              <p>The purpose of this library is to support any kind of oparations on large integers in C++, like in Python or Java.</p>
+              <p>On the "Read More" page you can see the implementation of all arithmetic and logical operators.</p>
+                            <div class="link">                       <a href="https://www.geeksforgeeks.org/bigint-big-integers-in-c-with-example/" target="_blank">Read More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="layer"></div>
+            <div class="content">
+              <h2>This Website</h2>
+              <p>This website tested my web development skills and creativity a lot while I was working on it and yes I know that I have to improve my color usage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="layer"></div>
+            <div class="content">
+              <h2>Dynamic Multi Stack</h2>
+              <p>This article is about creating a data structure that can handle operations on multiple stacks with growable size.</p>
+              <p>
+                The 'MultiStack' template class can support push, pop and top operations in constant amortized time.
+              </p>
+                            <div class="link">                       <a href="https://www.geeksforgeeks.org/implement-dynamic-multi-stack-k-stacks-using-only-one-data-structure/" target="_blank">Read More</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      </div>
       <div class="row">
         <div>
           <i>1</i>
@@ -3360,7 +3434,22 @@
     <div class="gr"></div>
     <div class="gr1"></div>
     <div class="contact" id = "4"></div>
-
     <div id="aboutL"></div>
+    <script>
+            var swiper = new Swiper(".swiper-container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+          slideShadows: true,
+        },
+        loop:true,
+      });
+    </script>
   </body>
 </html>
