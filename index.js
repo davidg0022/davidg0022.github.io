@@ -128,10 +128,8 @@ function Load() {
       Right.style.top = "65%";
       Right.style.opacity = "1";
       Scroll.style.opacity = "1";
-      if (innerWidth < 900)
-        Scroll.style.top = "85vh"
-      else
-        Scroll.style.top = "92vh";
+      if (innerWidth < 900) Scroll.style.top = "85vh";
+      else Scroll.style.top = "92vh";
       console.log(Left);
     }, 500);
   }
@@ -240,6 +238,3 @@ const name = () => {
   });
 };
 name();
-
-const left = document.querySelector(".swiper-3d .swiper-slide-shadow-left");
-left.style.background = "none";
