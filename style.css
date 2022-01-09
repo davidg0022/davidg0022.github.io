@@ -345,7 +345,6 @@ nav div #pic img:hover {
 }
 .back .row div i {
   color: rgb(155, 154, 154);
-  transition: 1s;
   user-select: none;
   cursor: defaut;
   font-size: 2.8vw;
@@ -356,10 +355,6 @@ nav div #pic img:hover {
   nav div #Logo {
     margin-left: 25vw;
     font-size: 8vw;
-  }
-  .back .row div i {
-    margin: 1vh;
-    font-size: 3.8vh;
   }
   .back .row {
     left: +5%;
@@ -442,7 +437,6 @@ nav div #pic img:hover {
 
 .back .row div i:hover {
   text-shadow: 1px 1px 1px;
-  opacity: 1;
   transition: 0s;
   color: black;
 }
@@ -1043,7 +1037,7 @@ a[target="_blank"]::after {
     max-width: 27vw;
   }
   .back .row div i {
-    font-size: 3.7vh;
+    font-size: 50px;
   }
   nav div #Logo {
     margin-left: 6vh;
@@ -1122,6 +1116,9 @@ a[target="_blank"]::after {
   }
 }
 @media (max-width: 952px) {
+  .back .row div i {
+    font-size: 30px;
+  }
   .container form input,
   .container form textarea {
     width: 60vw;
