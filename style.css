@@ -342,9 +342,11 @@ nav div #pic img:hover {
   white-space: nowrap;
   transform: rotate(-30deg);
   margin: 0.3vh;
+  transition: 1s;
 }
 .back .row div i {
   color: rgb(155, 154, 154);
+  transition: 1s;
   user-select: none;
   cursor: defaut;
   font-size: 2.8vw;
