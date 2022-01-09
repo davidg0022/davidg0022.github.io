@@ -427,6 +427,7 @@ nav div #pic img:hover {
   display: block;
 }
 .back {
+  overflow: hidden;
   background-color: white;
   position: absolute;
   font-family: Arial, Helvetica, sans-serif;
