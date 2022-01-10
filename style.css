@@ -349,7 +349,7 @@ nav div #pic img:hover {
   transition: 1s;
   user-select: none;
   cursor: defaut;
-  font-size: 2.8vw;
+  font-size: 64px;
   margin: 0.5vw;
 }
 
@@ -359,7 +359,7 @@ nav div #pic img:hover {
     font-size: 8vw;
   }
   .back .row {
-    left: +5%;
+    left: -35%;
     padding: 0;
     margin: 0;
   }
@@ -434,7 +434,6 @@ nav div #pic img:hover {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .back .row div i:hover {
@@ -446,6 +445,7 @@ nav div #pic img:hover {
   margin: 0.1vw;
   animation: animate1 80s linear infinite;
   animation-delay: -80s;
+
 }
 
 .back .row div:nth-child(2) {
@@ -454,11 +454,11 @@ nav div #pic img:hover {
 }
 @keyframes animate1 {
   0% {
-    transform: translateX(100%);
+    transform: translateX(10%);
     z-index: 2;
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-10%);
     z-index: 2;
   }
 }
@@ -468,32 +468,34 @@ nav div #pic img:hover {
     z-index: 2;
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-10%);
     z-index: 1;
   }
 }
 
 .back .row:nth-child(even) div {
+  z-index: 2;
   animation: animate3 80s linear infinite;
   animation-delay: -80s;
 }
 .back .row:nth-child(even) div:nth-child(2) {
+  z-index: 1;
   animation: animate4 80s linear infinite;
-  animation-delay: -40s;
+  animation-delay: -80s;
 }
 @keyframes animate3 {
   0% {
-    z-index: 1;
-    transform: translateX(-100%);
+    z-index: 2;
+    transform: translateX(-10%);
   }
   100% {
-    transform: translateX(100%);
-    z-index: 2;
+    transform: translateX(10%);
+    z-index: 1;
   }
 }
 @keyframes animate4 {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(-10%);
     z-index: 1;
   }
   100% {
@@ -1119,7 +1121,7 @@ a[target="_blank"]::after {
 }
 @media (max-width: 952px) {
   .back .row div i {
-    font-size: 30px;
+    font-size: 60px;
   }
   .container form input,
   .container form textarea {
