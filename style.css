@@ -333,35 +333,10 @@ nav div #pic img:hover {
   cursor: pointer;
   transition: ease 2s;
 }
-.back .row {
-  top: -37%;
-  left: -15%;
-  position: relative;
-  width: 100%;
-  display: flex;
-  white-space: nowrap;
-  transform: rotate(-30deg);
-  margin: 0.3vh;
-  transition: 1s;
-}
-.back .row div i {
-  color: rgb(155, 154, 154);
-  transition: 1s;
-  user-select: none;
-  cursor: defaut;
-  font-size: 64px;
-  margin: 0.5vw;
-}
-
 @media (max-width: 952px) {
   nav div #Logo {
     margin-left: 25vw;
     font-size: 8vw;
-  }
-  .back .row {
-    left: -35%;
-    padding: 0;
-    margin: 0;
   }
   body {
     overflow-x: hidden;
@@ -436,53 +411,6 @@ nav div #pic img:hover {
   flex-direction: column;
 }
 
-.back .row div i:hover {
-  text-shadow: 1px 1px 1px;
-  transition: 0s;
-  color: black;
-}
-.back .row div {
-  margin: 0.1vw;
-  animation: animate1 80s linear infinite;
-  animation-delay: -80s;
-
-}
-
-.back .row div:nth-child(2) {
-  animation: animate2 80s linear infinite;
-  animation-delay: -40s;
-}
-@keyframes animate1 {
-  0% {
-    transform: translateX(10%);
-    z-index: 2;
-  }
-  100% {
-    transform: translateX(-10%);
-    z-index: 2;
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: translateX(0%);
-    z-index: 2;
-  }
-  100% {
-    transform: translateX(-10%);
-    z-index: 1;
-  }
-}
-
-.back .row:nth-child(even) div {
-  z-index: 2;
-  animation: animate3 80s linear infinite;
-  animation-delay: -80s;
-}
-.back .row:nth-child(even) div:nth-child(2) {
-  z-index: 1;
-  animation: animate4 80s linear infinite;
-  animation-delay: -80s;
-}
 @keyframes animate3 {
   0% {
     z-index: 2;
@@ -796,20 +724,18 @@ nav div #pic img:hover {
   z-index: 6;
   position: absolute;
   width: 100vw;
-  height: 25vh;
+  height: 12vh;
   top: 200vh;
   background-image: linear-gradient(white 1%, transparent);
 }
 .contact {
-  z-index: 5;
   position: absolute;
   top: 300vh;
   height: 50vh;
   width: 100vw;
   background: black;
-  box-shadow: 15px 15px 4vw 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 1vw 1vw rgba(44, 44, 44, 0.9);
 }
-
 #aboutL {
   position: relative;
   margin: 0;
@@ -818,6 +744,7 @@ nav div #pic img:hover {
 }
 
 .projects {
+  /* display: none; */
   position: absolute;
   top: 15vh;
   width: 100%;
@@ -826,7 +753,7 @@ nav div #pic img:hover {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: black;
-  box-shadow: 0 15px 4vw 0 rgb(0, 0, 0, 0.8);
+  box-shadow: 0 0 1vw 1vw rgba(44, 44, 44, 0.8);
 }
 
 .swiper-slide {
@@ -1021,7 +948,53 @@ a[target="_blank"]::after {
   position: relative;
   color: white;
 }
+
+.back .bars {
+  position: relative;
+  left: -25%;
+}
+.back .bars .bar {
+  overflow: hidden;
+  position: relative;
+  width: 250vw;
+  height: 7vh;
+  margin-top: 6vh;
+  transform: rotate(+30deg);
+  background: gray;
+  box-shadow: 0 5px 1vw 0 rgb(0, 0, 0, 0.5);
+  transition: 1s;
+}
+.back .bars .bar::before {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  width: 250vw;
+  height: 7vh;
+  top: +7vh;
+  background: black;
+  transition: 1s;
+}
+.back .bars .bar::after {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  width: 250vw;
+  height: 7vh;
+  top: -7vh;
+  background: black;
+  transition: 1s;
+}
+.back .bars .bar:hover::before {
+  top: 0;
+}
+.back .bars .bar:hover::after {
+  top: 0;
+}
+
 @media (max-width: 1052px) {
+  .back .bg img {
+    width: 150vw;
+  }
   .projects .title h3 {
     top: 2vh;
     font-size: 4vh;
@@ -1039,9 +1012,6 @@ a[target="_blank"]::after {
   .swiper-slide {
     top: 12vh;
     max-width: 27vw;
-  }
-  .back .row div i {
-    font-size: 50px;
   }
   nav div #Logo {
     margin-left: 6vh;
@@ -1120,8 +1090,18 @@ a[target="_blank"]::after {
   }
 }
 @media (max-width: 952px) {
-  .back .row div i {
-    font-size: 60px;
+  .back .bars .bar {
+    height: 4vh;
+    margin-top: 3.5vh;
+    box-shadow: 0 5px 1vw 0 rgb(0, 0, 0, 0.2);
+  }
+  .back .bars .bar::before {
+    height: 4vh;
+    top: -4vh;
+  }
+  .back .bars .bar::after {
+    height: 4vh;
+    top: +4vh;
   }
   .container form input,
   .container form textarea {
